@@ -5,13 +5,7 @@ class TestComponent extends React.Component{
   //定义组件状态
   state = {
     //这里可以定义各种属性
-    name: 'lgz',
-    count: 0,
-    list: [1,2,3],
-    people:{
-      name: 'new people',
-      age: 30
-    }
+    name: 'cp teacher'
   }
   changeName =  () =>{
     //修改state中的状态name
@@ -20,39 +14,16 @@ class TestComponent extends React.Component{
       name:'123'
     })
   }
-  //修改状态中的list和基本数据类型和对象类型
-  clickHandler = () =>{
-    this.setState({
-      list: [...this.state.list, 4, 5],
-      count: this.state.count + 1,
-      people:{
-        ...this.state.people,
-        name:'idea'
-      }
-
-    })
-  }
   render(){
-    //使用状态  
+    //使用状态
     return (
-      <>
-        <div>
-          <u1>
-            {this.state.list.map(item=><li key={item}>{item}</li>)}
-          </u1>
-        </div>
-        <div>
-          {this.state.people.name}
-        </div>
-        <div>
-          {this.state.count}
-          <button onClick={this.clickHandler}>+</button>
-        </div>
-      </>
-    )
-      
+      <div>
+        this is TestComponent
+        当前name为: {this.state.name}
+        <button onClick={this.changeName}>changeName</button>
+      </div>)
   }
-}  
+}
 
 /**
  * 总结

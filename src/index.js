@@ -1,17 +1,13 @@
+//框架的核心包
 import React from 'react';
+//专门用作渲染相关的包
 import ReactDOM from 'react-dom/client';
+//应用的全局文件样式
 import './index.css';
+//引入根目录组件
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
     <App />
-  </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
